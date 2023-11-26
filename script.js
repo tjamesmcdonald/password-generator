@@ -14,6 +14,10 @@ function generatePassword() {
   var uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
   var numerals = "1234567890"
   var symbols = " !@#$%^&*()~.,'+-/:<>=[]_`{}|"
+  if (passwordLength < 8 || passwordLength > 128) {
+    alert('Please input a number between 8 and 128')
+    return
+  }
 
 //lowercase
   var allowLowercase = confirm('Include lowercase characters?')
