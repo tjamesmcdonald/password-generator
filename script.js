@@ -14,35 +14,29 @@ function generatePassword() {
   var uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
   var numerals = "1234567890"
   var symbols = " !@#$%^&*()~.,'+-/:<>=[]_`{}|"
-  if (passwordLength < 8 || passwordLength > 128) {
+  if (passwordLength < 8 || passwordLength > 128 || passwordLength != Number) {
     alert('Please input a number between 8 and 128')
     return
   }
 
-//lowercase
   var allowLowercase = confirm('Include lowercase characters?')
   if (allowLowercase) {
    allowableCharacters += lowercase
   }
 
-//uppercase
   var allowUppercase = confirm('Include uppercase characters?')
   if (allowUppercase) {
    allowableCharacters += uppercase
   }
 
-
-//numerals
   var allownumerals = confirm('Include numbers?')
   if (allownumerals) {
    allowableCharacters += numerals
   }
-//symbols
   var allowsymbols = confirm('Include symbols?')
   if (allowsymbols) {
     allowableCharacters += symbols
   }
-// generate password
   var password = ''
   for (var i = 0; i < passwordLength; i++) {
    var randomIndex = Math.floor(Math.random() * allowableCharacters.length)

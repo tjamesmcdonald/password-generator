@@ -1,4 +1,4 @@
-# password-generator
+# Password Generator
 
 Create a function in the script.js file to generate a random password.
 
@@ -21,3 +21,11 @@ THEN a password is generated that matches the selected criteria
 WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
 ```
+
+## Deployment
+
+Site page: https://tjamesmcdonald.github.io/password-generator/
+
+Github repo: https://github.com/tjamesmcdonald/password-generator
+
+Screenshot: ![Screenshot](Images/Screenshot.png)
