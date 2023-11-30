@@ -14,10 +14,10 @@ function generatePassword() {
   var uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
   var numerals = "1234567890"
   var symbols = " !@#$%^&*()~.,'+-/:<>=[]_`{}|"
-  if (passwordLength < 8 || passwordLength > 128 || passwordLength != Number) {
+  if (passwordLength < 8 || passwordLength > 128) {
     alert('Please input a number between 8 and 128')
-    return
-  }
+    generatePassword()
+  } else {
 
   var allowLowercase = confirm('Include lowercase characters?')
   if (allowLowercase) {
@@ -47,7 +47,7 @@ function generatePassword() {
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
 }
-
+}
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
